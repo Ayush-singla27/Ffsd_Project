@@ -1,0 +1,254 @@
+*{
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+
+.navBar{
+  position: fixed;
+  height: 15vh;
+  width: 15vh;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 0;
+
+  z-index: 10;
+  background-color: white;
+}
+
+.navBar2{
+  height: 25vh;
+  width: 25vh;
+  background-color: black;
+  z-index: 1;
+  border:solid;
+  border-color: white;
+}
+
+.navPos{
+  padding-left: 3vh;
+  padding-top: 6vh;
+}
+
+.seg1IconPos{
+  position: fixed;
+  padding : 0px;
+  transform: rotateZ(-60deg);
+  padding-left: 15vh;
+  padding-top: 14vh;
+  z-index: 6;
+}
+
+.seg2IconPos{
+  position: fixed;
+  padding-left: 14vh;
+  padding-top: 16vh;
+  transform: rotateZ(60deg);
+  z-index: 6;
+}
+
+.seg3IconPos{
+  position: fixed;
+  padding-left: 12vh;
+  padding-top: 12vh;
+  /* transform: rotateZ(60deg); */
+  z-index: 6;
+}
+
+.navBar:hover ~ .seg1{
+  animation: navAnime1 0.5s ease-in forwards 0s alternate ;
+}
+.navBar:hover ~ .seg2{
+  animation: navAnime1 0.5s ease-in forwards 0.25s  alternate ;
+}
+.navBar:hover ~ .seg3{
+  animation: navAnime1 0.5s ease-in forwards 0.5s  alternate ;
+}
+
+@keyframes navAnime1{
+  100%{
+    height: 25vh;
+    width: 25vh;
+    background-color: #53B3CB;
+  }
+}
+
+.seg1{
+  top: 0;
+  position: fixed;
+  height: 15vh;
+  width: 15vh;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 0;
+  transform-origin: top left;
+  transform: rotateZ(60deg);
+  background-color: #E01A4F;
+  border: solid;
+  border-color: white;
+  z-index: 5;
+  /* opacity: 0; */
+}
+
+.seg1:hover {
+  height: 25vh;
+  width: 25vh;
+}
+
+.seg1:focus{
+  background-color: blue;
+}
+
+.seg2{
+  background-color: #E01A4F;
+  transform: rotateZ(-60deg);
+}
+
+.seg3{
+  background-color: #E01A4F;
+  transform: rotateZ(0deg);
+  z-index: 4;
+}
+
+.backImg{
+  position: fixed;
+  width: 100%;
+  z-index: -10;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.backVideo {
+  position: relative;
+  width: 100%;
+  z-index: -1;
+
+}
+
+.mainText{
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* padding: 10px; */
+  border: solid;
+  border-radius: 10px;
+  /* font-family: "poppins", sans-serif; */
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+  font-size: 80px;
+  text-align: center;
+  margin-top: 20%;
+  color: white;
+animation: mainTextAnime 5s ease-in forwards 0s infinite alternate ;
+
+}
+
+.subText{
+  position: absolute;
+  font-size: 18px;
+}
+
+@keyframes mainTextAnime {
+
+  20%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  70%{
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(50%);
+    opacity: 0;
+  }
+}
+
+.mainText1{
+  position: absolute;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* padding: 10px; */
+  border: solid;
+  border-radius: 10px;
+  /* font-family: "poppins", sans-serif; */
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+  font-size: 80px;
+  text-align: center;
+  margin-top: 20%;
+  color: white;
+  animation: mainTextAnime1 5s ease-in forwards 0s infinite alternate ;
+  opacity: 0;
+
+}
+
+.subText1{
+  position: absolute;
+  font-size: 18px;
+  padding-left: 20%;
+}
+
+@keyframes mainTextAnime1 {
+  0%{
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  20%{
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  70%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+/* .subText:hover{
+  position: absolute;
+  transform: translateX(100%);
+
+} */
+
+.transition{
+  height: 1000px;
+  background-image: linear-gradient(#0C090D,#53B3CB);
+}
+
+.mid{
+  /* display: flex; */
+  position: relative;
+}
+
+.midText{
+  position: absolute;
+  color: #53B3CB;
+  z-index: 1;
+
+}
+
+.whiteLines{
+  position: relative;
+  background-color: #53B3CB;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+}
+/* BLUE : #53B3CB */
+/* PINK : #E01A4F */
+.blankLine{
+  position: relative;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+}
